@@ -1,7 +1,6 @@
 from django.apps import AppConfig
 
 
-class EmployeesConfig(AppConfig):
+class SrcConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.employees'
-    label = 'apps_employees'
+    name = 'src'
