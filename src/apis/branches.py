@@ -7,12 +7,16 @@ from src.models.agency import Agency
 def add_branch(request):
     data = request.data
 
-    try:   
+    try:  
         agency_id = data.get('agency_id')
-        agency = Agency.objects.filter(agency_id = agency_id)
-        if(not agency.exists()):
-            raise Exception('Invalid agency_id')
-        agency = agency.first()
+        agency = Agency.objects.get(agency_id = agency_id) 
+        
+        branch_id = data.get('branch_id', None)
+        if(branch_id != None and branch_id != ''):
+            branch = Branches.objects.get(branch_id = branch_id)
+        else:  
+            branch = Branches()
+            branch.branch_id = Branches.objects.get_next_branch_id(agency)
         
         address = data.get('address')
         if(address == '' or address == None):
@@ -26,8 +30,6 @@ def add_branch(request):
         if(pincode == '' or pincode == None):
             raise Exception('Pincode cannot be empty')
         
-        branch = Branches()
-        branch.branch_id = Branches.objects.get_next_branch_id(agency)
         branch.agency = agency
         branch.address = address
         branch.city = city

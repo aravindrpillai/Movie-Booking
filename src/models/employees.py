@@ -12,7 +12,6 @@ class Employees(models.Model):
     mobile = models.CharField(max_length=10, unique=True, null=False)
     mobile_verified = models.BooleanField(default=False)
     email_verified = models.BooleanField(default=False)
-    employee_credential = models.ForeignKey(EmployeeCredentials, null=False, on_delete=models.CASCADE)
 
     class meta:
         db_table = "employees"
