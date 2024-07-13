@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "cb13bab3-b9bf-4726-9bfa-2ebd88b1f67f",
+		"name": "movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36677147"
+	},
+	"item": [
+		{
+			"name": "add agency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Archana\",\r\n    \"email\": \"hello@archana.com\",\r\n    \"website\": \"www.archana.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/apis/agency/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"agency",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add branch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"agency_id\": \"M003\",\r\n    \"address\": \"address M003-1\",\r\n    \"city\": \"Kollam\",\r\n    \"pincode\": \"691210\",\r\n    \"maps_url\": \"google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/apis/branches/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"branches",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add screens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"branch_id\" : \" B0017\",\r\n    \"number\" : \"Audi 01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/apis/screens/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"apis",
+						"screens",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

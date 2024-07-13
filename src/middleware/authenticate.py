@@ -1,5 +1,3 @@
-from apps.customers.models.customer_token import CustomerToken
-from apps.employees.models.employee_token import EmployeeToken
 from movies.settings import TOKEN_EXPIRY_TIME_IN_MINUTES
 from rest_framework.renderers import JSONRenderer
 from datetime import datetime, timedelta

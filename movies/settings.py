@@ -28,7 +28,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'src.middleware.authenticate.Authenticate'
+    #'src.middleware.authenticate.Authenticate'
 ]
 
 ROOT_URLCONF = 'movies.urls'
